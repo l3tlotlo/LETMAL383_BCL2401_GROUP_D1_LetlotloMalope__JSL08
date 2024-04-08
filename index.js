@@ -1,3 +1,4 @@
+//BankBranch class
 class BankBranch {
     constructor(branchInfo) {
         if (!BankBranch.instance) {

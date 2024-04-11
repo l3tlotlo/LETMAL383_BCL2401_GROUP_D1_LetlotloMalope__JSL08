@@ -1,8 +1,10 @@
-//BankBranch class
+// BankBranch class
+let branchInstance = null;
+
 class BankBranch {
     constructor(branchInfo) {
         if (!BankBranch.instance) {
-            this.branchInfo = "null";
+            this.branchInfo = branchInfo;
             BankBranch.instance = this;
         }
         return BankBranch.instance;
@@ -12,9 +14,6 @@ class BankBranch {
         return this.branchInfo;
     }
 }
-
-// Variables to store the singleton instance of the main bank branch
-const bankBranchInstance = new BankBranch({ name: "Main Branch", location: "City Center" });
 
 // Instances of the  class "BankBranch" with different branch information
 const branchA = new BankBranch({ name: "Branch A", location: "Sandton" });  //"Branch A" is located in "sandton"
